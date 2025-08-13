@@ -34,9 +34,9 @@
                 $_SESSION['email'] = $user['email'];
 
                 if($user['role'] === 'admin'){
-                    header("location: admin_page.php");
+                    header("location: ../dashboard/admin-dashboard /admin_page.php");
                 } else {
-                    header("location: user_page.php");
+                    header("location: ../dashboard/user_dashboard/user_page.php");
                 }
                 exit();
             }

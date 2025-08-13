@@ -1,0 +1,258 @@
+:root {
+  --bg: #f4f7fa;
+  --text: #222;
+  --primary: #375a7f;
+  --accent: #f39c12;
+  --card: #fff;
+  --hover: #eaf1f8;
+  --border: #dcdfe3;
+}
+
+body.dark-mode {
+  --bg: #121820;
+  --text: #e1e8f0;
+  --primary: #4a90e2;
+  --accent: #f1c40f;
+  --card: #1e2a38;
+  --hover: #2e3e56;
+  --border: #2f3b4e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+  height: 100vh;
+}
+
+/* Layout container: flex horizontally */
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: var(--card);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+
+.sidebar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: var(--hover);
+  color: var(--primary);
+}
+
+.menu a.logout {
+  margin-top: auto;
+  color: #e74c3c;
+}
+
+.menu a.logout:hover {
+  background: #fceae9;
+  color: #c0392b;
+}
+
+/* Main Content */
+.main {
+  flex-grow: 1;
+  padding: 1.5rem 2rem;
+  overflow-y: auto;
+}
+
+/* Topnav */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.topnav .left h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.topnav .right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topnav .right input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  outline: none;
+  background: var(--card);
+  color: var(--text);
+}
+
+.topnav .right button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.topnav .right .profile-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  font-size: 1rem;
+}
+
+.topnav .right .profile-link:hover {
+  background-color: var(--hover);
+  color: var(--primary);
+}
+
+/* Notification bell */
+.noti-bell {
+  position: relative;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.4rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.noti-bell:hover {
+  background-color: var(--hover);
+  color: var(--primary);
+}
+
+.noti-bell .badge {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  background: red;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card i {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Charts */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.chart-box {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Extras */
+.extras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.extra-box {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.extra-box h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.product-list li,
+.earning-list li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main {
+    padding: 1rem;
+  }
+  
+
+
+}

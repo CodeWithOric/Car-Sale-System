@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports - AdminPro</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="reportstyle.css" />
+  
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">AdminPro</div>
+    <nav class="menu">
+      <a href="Index.html"><i class="fas fa-home"></i> Dashboard</a>
+      <a href="Manage-Cars.html" class="active"><i class="fas fa-car"></i> Manage Cars</a>
+      <a href="#"><i class="fas fa-clipboard-list"></i> Orders</a>
+      <a href="User.html"><i class="fas fa-users-cog"></i> Users</a>
+      <a href="report.html" class="active"><i class="fas fa-chart-line"></i> Reports</a>
+      <a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a>
+      <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+      <a href="#"><i class="fas fa-cog"></i> Settings</a>
+      <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="topnav">
+      <div class="left">
+        <h3>Reports</h3>
+      </div>
+      <div class="right">
+        <input type="text" placeholder="Search..." />
+        <a href="#" class="noti-bell">🔔<span class="badge">3</span></a>
+        <a href="profile.html" class="profile-link">👤 Profile</a>
+        
+        <button id="theme-toggle">🌙</button>
+      </div>
+    </div>
+
+    <div class="reports">
+      
+      <!-- User Report Section -->
+      <div class="report-section">
+        
+        <div class="tabs">
+           
+          <button class="tab-btn active" onclick="showTable('reports-overall')">Overall</button>
+          <button class="tab-btn" onclick="showTable('reports-daily')">Daily</button>
+          <button class="tab-btn" onclick="showTable('reports-weekly')">Weekly</button>
+          <button class="tab-btn" onclick="showTable('reports-monthly')">Monthly</button>
+          <button class="tab-btn" onclick="showTable('reports-yearly')">Yearly</button>
+          
+        </div>
+        <div class="table-container">
+          
+          <table id="reports-overall" class="data-table">
+    <tr><th>Username</th><th>Email</th><th> Date</th><th>Type of cars</th><th>Amount</th></tr>
+            <tr><td>john.doe</td><td>john@gmail.com</td><td>2024-01-10</td><th>Toyota</th><th>1750000</th></tr>
+            <tr><td>emily.smith</td><td>emily@gmail.com</td><td>2024-04-05</td><th>Toyota</th><th>1750000</th></tr>
+      <tr><td>daniel.chan</td><td>daniel@gmail.com</td><td>2024-01-15</td><th>Toyota</th><th>1750000</th></tr>
+          <tr><td>mike.jones</td><td>mike@gmail.com</td><td>2024-06-01</td><th>Toyota</th><th>1750000</th></tr>
+    <tr><td>sara.lee</td><td>sara@gmail.com</td><td>2023-07-01</td><th>Toyota</th><th>1750000</th></tr>
+        </table>
+
+      
+        
+          <table id="reports-daily" class="data-table hidden">
+            <tr><th>Username</th><th>Email</th><th> Date</th><th>Type of cars</th><th>Amount</th></tr>
+            <tr><td>john.doe</td><td>john@gmail.com</td><td>2024-01-10</td><th>Toyota</th><th>1750000</th></tr>
+            <tr><td>emily.smith</td><td>emily@gmail.com</td><td>2024-04-05</td><th>Toyota</th><th>1750000</th></tr>
+          </table>
+
+          <table id="reports-weekly" class="data-table hidden">
+            <tr><th>Username</th><th>Email</th><th>Date</th><th>Type of cars</th><th>Amount</th></tr>
+            <tr><td>daniel.chan</td><td>daniel@gmail.com</td><td>2024-01-15</td><th>Toyota</th><th>1750000</th></tr>
+          </table>
+
+          <table id="reports-monthly" class="data-table hidden">
+            <tr><th>Username</th><th>Email</th><th>Date</th><th>Type of cars</th><th>Amount</th></tr>
+            <tr><td>mike.jones</td><td>mike@gmail.com</td><td>2024-06-01</td><th>Toyota</th><th>1750000</th></tr>
+          </table>
+
+          <table id="reports-yearly" class="data-table hidden">
+            <tr><th>Username</th><th>Email</th><th>Date</th><th>Type of cars</th><th>Amount</th></tr>
+            <tr><td>sara.lee</td><td>sara@gmail.com</td><td>2023-07-01</td><th>Toyota</th><th>1750000</th></tr>
+          </table>
+        </div>
+      </div>
+</div>
+</div>
+      
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
+    
+  </main>
+  

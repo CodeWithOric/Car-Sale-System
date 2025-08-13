@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ratings & Reviews</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="Style 2.0.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">AdminPro</div>
+      <nav class="menu">
+        <a href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="Manage-Cars.html"><i class="fas fa-car"></i> Manage Cars</a>
+        <a href="order.html"><i class="fas fa-clipboard-list"></i> Orders</a>
+        <a href="User.html"><i class="fas fa-users-cog"></i> Users</a>
+        <a href="review.html" class="active"><i class="fas fa-chart-line"></i> Review Ratings</a>
+         <a href="report.html"><i class="fa-solid fa-file-lines"></i></i> Reports</a>
+        <a href="messages.html"><i class="fas fa-envelope"></i> Messages</a>
+        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main">
+      <!-- Top Navigation -->
+      <div class="topnav">
+        <div class="left">
+          <h1>Review_Rating</h1>
+        </div>
+        <div class="right">
+          <input type="text" placeholder="Search..." />
+          <a href="#" class="noti-bell">🔔<span class="badge">3</span></a>
+          <a href="profile.html" class="profile-link">👤 Profile</a>
+          <button id="theme-toggle" title="Toggle Theme">🌙</button>
+        </div>
+      </div>
+
+      <!-- Full Width Content -->
+      <div class="review-section">
+        <!-- Ratings -->
+        <div class="ratings-container">
+          <div class="ratings-content">
+            <div><img src="./image/review_image.jpg" alt="" /></div>
+            <div class="ratings-header">Customer reviews</div>
+            <div class="average-rating">4.50</div>
+            <div class="total-reviews">130 Reviews</div>
+            <div class="icon-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+
+          <div class="rating-bar"><div class="stars">5</div><div><i class="fa-solid fa-star"></i></div>
+            <div class="bar-container"><div class="bar" style="width: 87%;"></div></div>
+            <div class="percentage">87%</div>
+          </div>
+
+          <div class="rating-bar"><div class="stars">4</div><div><i class="fa-solid fa-star"></i></div>
+            <div class="bar-container"><div class="bar" style="width: 70%;"></div></div>
+            <div class="percentage">70%</div>
+          </div>
+
+          <div class="rating-bar"><div class="stars">3</div><div><i class="fa-solid fa-star"></i></div>
+            <div class="bar-container"><div class="bar" style="width: 50%;"></div></div>
+            <div class="percentage">50%</div>
+          </div>
+
+          <div class="rating-bar"><div class="stars">2</div><div><i class="fa-solid fa-star"></i></div>
+            <div class="bar-container"><div class="bar" style="width: 30%;"></div></div>
+            <div class="percentage">30%</div>
+          </div>
+
+          <div class="rating-bar"><div class="stars">1</div><div><i class="fa-solid fa-star"></i></div>
+            <div class="bar-container"><div class="bar" style="width: 10%;"></div></div>
+            <div class="percentage">10%</div>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="reviews-container">
+          <div class="review-box">
+            <div class="review-header">
+              <img src="./image/avatar_1.jpg" class="reviewer-avatar" />
+              <div class="reviewer-info">
+                <div class="reviewer-name">Cody</div>
+                <div class="review-date">22 Dec, 2023</div>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="review-content">This car is amazing! I've used it for a week now and it works perfectly.</div>
+            <div class="review-actions">
+              <div class="action-item"><i class="far fa-comment"></i> Reply</div>
+              <div class="action-item"><i class="fa-regular fa-trash-can"></i> Delete</div>
+              <div class="likes">10 <i class="far fa-thumbs-up"></i></div>
+            </div>
+          </div>
+
+          <div class="review-box">
+            <div class="review-header">
+              <img src="./image/avatar_2.jfif" class="reviewer-avatar" />
+              <div class="reviewer-info">
+                <div class="reviewer-name">Rose</div>
+                <div class="review-date">26 Oct, 2020</div>
+              </div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="review-content">This car is amazing! I've used it for a week now and it works perfectly.</div>
+            <div class="review-actions">
+              <div class="action-item"><i class="far fa-comment"></i> Reply</div>
+              <div class="action-item"><i class="fa-regular fa-trash-can"></i> Delete</div>
+              <div class="likes">16 <i class="far fa-thumbs-up"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      body.classList.add("dark-mode");
+      themeToggle.textContent = "☀️";
+    }
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        themeToggle.textContent = "☀️";
+      } else {
+        localStorage.setItem("theme", "light");
+        themeToggle.textContent = "🌙";
+      }
+    });
+  </script>
+</body>
+</html>

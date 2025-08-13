@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    margin:  0 15px;
+    margin: 0 15px;
 }
 
 .form-box {
@@ -40,7 +40,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 12px;
     background: #eee;
@@ -81,7 +82,7 @@ p a {
     text-decoration: none;
 }
 
-p a:hover{
+p a:hover {
     text-decoration: underline;
 }
 

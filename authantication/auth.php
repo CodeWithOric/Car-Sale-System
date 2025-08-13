@@ -1,38 +1,42 @@
 <?php
 
-    session_start();
-    $errors = [
-        'login' => $_SESSION['login_error'] ?? '',
-        'register' => $_SESSION['register_error'] ?? ''
-    ];
+session_start();
+$errors = [
+    'login' => $_SESSION['login_error'] ?? '',
+    'register' => $_SESSION['register_error'] ?? ''
+];
 
-    $activeForm = $_SESSION['active_form'] ?? 'login';
+$activeForm = $_SESSION['active_form'] ?? 'login';
 
-    // After showing errors in HTML
-    unset($_SESSION['login_error'], $_SESSION['register_error'], $_SESSION['active_form']);
+// After showing errors in HTML
+unset($_SESSION['login_error'], $_SESSION['register_error'], $_SESSION['active_form']);
 
-    function showError($error){
-        return !empty($error) ? "<p class='error-message'>$error</p>" : '';
-    }
+function showError($error)
+{
+    return !empty($error) ? "<p class='error-message'>$error</p>" : '';
+}
 
-    function isActiveForm($formName, $activeForm) {
-        return $formName === $activeForm ? 'active' : '';
-    }
+function isActiveForm($formName, $activeForm)
+{
+    return $formName === $activeForm ? 'active' : '';
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login &  Registeration Form || EvokeDrive</title>
+    <title>Login & Registeration Form || EvokeDrive</title>
 
     <!-- main css link -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+    
     <div class="container">
         <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
             <form action="login_register.php" method="post">
@@ -45,7 +49,7 @@
             </form>
         </div>
 
-         <div class="form-box <?= isActiveForm('register', $activeForm); ?>" id="register-form">
+        <div class="form-box <?= isActiveForm('register', $activeForm); ?>" id="register-form">
             <form action="login_register.php" method="post">
                 <h2>Register</h2>
                 <?= showError($errors['register']); ?>
@@ -65,4 +69,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

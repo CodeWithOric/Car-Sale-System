@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>EV Test Drive Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>⚡ EvokeDrive</h1>
+    <nav>
+      <a href="../home-page/home-page.php">Home</a>
+      <a href="../home-page/home-page.php">Models</a>
+      <a href="../home-page/home-page.php">Book Test Drive</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>📝 Book a Test Drive</h2>
+
+    <form id="testDriveForm" action="submit_testdrive.php" method="POST">
+      <div>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your name">
+      </div>
+
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="example@domain.com">
+      </div>
+
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+95 9xxxxxxx">
+      </div>
+
+      <div>
+        <label for="model">Select EV Model</label>
+        <select id="model" name="model">
+          <option value="">Select a Model</option>
+          <option value="MG IM5">MG IM5</option>
+          <option value="Tesla Model 3">Tesla Model 3</option>
+          <option value="Chevrolet Equinox EV">Chevrolet Equinox EV</option>
+          <option value="Audi A6 Sportback E-Tron">Audi A6 Sportback E-Tron</option>
+          <option value="Volvo EX30">Volvo EX30</option>
+          <option value="MG ZS EV">MG ZS EV</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date">
+      </div>
+
+      <div>
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" name="time">
+      </div>
+
+      <div>
+        <label for="location">Location</label>
+        <select id="location" name="location">
+          <option value="">Select Location</option>
+          <option value="Yangon Showroom">Yangon Showroom</option>
+          <option value="Mandalay Center">Mandalay Center</option>
+          <option value="Naypyidaw Hub">Naypyidaw Hub</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="driverLicense">Driving License No.</label>
+        <input type="text" id="driverLicense" name="driverLicense" placeholder="DL1234567890">
+      </div>
+
+      <div class="full-width">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any preferences or requests?"></textarea>
+      </div>
+
+      <div class="full-width">
+        <button type="submit" class="button">🚗 Book Test Drive</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

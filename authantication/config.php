@@ -3,7 +3,7 @@
     $host = "localhost";
     $user = "root";
     $password = "";
-    $datebase = "users_db";
+    $datebase = "evokedrive";
 
     $conn = new mysqli($host, $user, $password, $datebase);
 
